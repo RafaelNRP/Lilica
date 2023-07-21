@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu Site com Botões</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        #textoExibido {
+            display: none;
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="botoes">
+        <button onclick="exibirTexto('Guaxinim')">Kora</button>
+        <button onclick="exibirTexto('Safadu')">Hei</button>
+        <button onclick="exibirTexto('Chatu')">Zero</button>
+        <button onclick="exibirTexto('Ecchizaum')">Hati</button>
+    </div>
+
+    <div id="textoExibido"></div>
+
+    <script>
+        function exibirTexto(texto) {
+            var elementoTexto = document.getElementById("textoExibido");
+            elementoTexto.innerHTML = texto;
+            elementoTexto.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
